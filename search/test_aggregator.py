@@ -2,17 +2,11 @@ from .aggregator import get_author_from_api, get_author, multi_search
 
 def test_get_author_from_api():
   author_name = get_author_from_api('0')
-  if author_name == '':
-    assert True
-  else:
-    assert False
+  assert author_name == ''
 
 def test_get_author():
   author_name = get_author('0')
-  if author_name == '':
-    assert True
-  else:
-    assert False
+  assert author_name == ''
 
 def test_multi_search():
   search_strings = [
@@ -21,7 +15,4 @@ def test_multi_search():
   ]
 
   (results, count) = multi_search(search_strings, 4)
-  if type(results) == list and count == 8:
-    assert True
-  else:
-    assert False
+  assert type(results) == list and count == 8
