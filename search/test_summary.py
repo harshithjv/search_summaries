@@ -1,9 +1,21 @@
-from .summary import getSummaries, search_summaries
+"""
+Test script for summary.py
+"""
 
-def test_getSummaries():
-  summaries = getSummaries()
-  assert type(summaries) == list
+from .summary import get_summaries, search_summaries
+
+
+def test_get_summaries():
+    """
+    TODO: Function description
+    """
+    summaries = get_summaries()
+    assert isinstance(summaries, list)
+
 
 def test_search_summaries():
-  (results, count) = search_summaries("Book of", 2)
-  assert type(results) == list and count == 2 
+    """
+    TODO: Function description
+    """
+    (results, count) = search_summaries("Book of", 2)
+    assert isinstance(results, list) and count == 2
